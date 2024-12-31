@@ -1,3 +1,6 @@
+require('dotenv').config();
+
+
 const global = {
   currentPage: window.location.pathname,
   search: {
@@ -10,7 +13,7 @@ const global = {
   api: {
     // Register your key at https://www.themoviedb.org/settings/api and enter here
     // Only use this for development or very small projects. You should store your key and make requests from a server
-    apiKey: 'd315821154c2c58bc8721f9bf112a1bb',
+    apiKey: process.env.API_KEY,
     apiUrl: 'https://api.themoviedb.org/3/',
   },
 };
